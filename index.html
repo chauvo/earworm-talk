@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Stuck in Your Head: The Science of Earworms</title>
+
+    <!-- RevealJS core + theme (CDN, stable 5.x) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+
+    <style>
+      :root {
+        --accent: #ffd23f;
+        --accent-2: #ff6b6b;
+      }
+
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+      }
+      .reveal h1 { color: var(--accent); }
+      .reveal .accent { color: var(--accent); }
+      .reveal .accent2 { color: var(--accent-2); }
+      .reveal em { color: var(--accent); font-style: normal; }
+
+      /* Speaker badges */
+      .speaker {
+        display: inline-block;
+        font-size: 0.45em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 0.15em 0.7em;
+        border-radius: 999px;
+        text-transform: uppercase;
+        vertical-align: middle;
+      }
+      .speaker-a { background: var(--accent); color: #111; }
+      .speaker-b { background: var(--accent-2); color: #111; }
+
+      /* Readable text over background photos.
+         RevealJS renders backgrounds in a separate layer (.slide-background),
+         so we darken THAT layer with a pseudo-element overlay rather than a
+         div inside the slide content. */
+      .reveal .backgrounds .slide-background-content::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.88) 0%,
+          rgba(0, 0, 0, 0.7) 45%,
+          rgba(0, 0, 0, 0.45) 100%
+        );
+      }
+      .reveal section.has-bg > * {
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+      }
+
+      .reveal ul { display: block; }
+      .reveal li { margin-bottom: 0.45em; }
+      .reveal .big { font-size: 1.15em; }
+      .reveal .quote {
+        border-left: 4px solid var(--accent);
+        padding-left: 0.7em;
+        font-style: italic;
+        text-align: left;
+      }
+      .reveal .credit {
+        position: absolute;
+        bottom: 8px;
+        right: 14px;
+        font-size: 11px;
+        opacity: 0.5;
+        z-index: 3;
+      }
+      .reveal .names { font-size: 0.6em; opacity: 0.85; margin-top: 0.6em; }
+      .reveal .tag { font-size: 0.55em; opacity: 0.7; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- 1. TITLE -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h1>Stuck in Your Head</h1>
+          <h3 class="accent">The Science of Earworms 🎵</h3>
+          <p class="tag">Why songs get stuck in your head — and how to get rid of them</p>
+          <p class="names">A lightning talk by <span class="accent">[Speaker A]</span> &amp; <span class="accent2">[Speaker B]</span></p>
+          <aside class="notes">
+            <p><strong style="color:#ffd23f">Speaker A — open (~30s):</strong></p>
+            <p>"Hi everyone — quick fun one today. Have you ever had a song play in your head on
+            repeat, all day, even though you didn't choose it? That thing has a name, real science
+            behind it, and — good news — actual ways to make it stop."</p>
+            <p>Introduce both presenters. Keep energy high; this is a light talk.</p>
+            <p><em>Total target: ~7 minutes. A takes slides 1–4, B takes 5–8.</em></p>
+          </aside>
+        </section>
+
+        <!-- 2. WHAT IS AN EARWORM -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>What <em>is</em> an earworm?</h2>
+          <ul>
+            <li>The science name: <span class="accent">Involuntary Musical Imagery</span> (INMI)</li>
+            <li>A short loop — usually a <em>15–30 second chorus</em></li>
+            <li>~<em>90%</em> of people get one at least once a week</li>
+            <li>You didn't choose it — your brain just hits "play"</li>
+          </ul>
+          <aside class="notes">
+            <p><strong style="color:#ffd23f">Speaker A (~50s):</strong></p>
+            <p>"'Earworm' is the nickname — the real term is Involuntary Musical Imagery, or INMI.
+            Key word: <em>involuntary</em>. You don't decide to play it."</p>
+            <p>"It's almost always a tiny chunk — 15 to 30 seconds, usually the catchy chorus, not
+            the whole song. And it's incredibly common: surveys put it around 90% of people every
+            week."</p>
+          </aside>
+        </section>
+
+        <!-- 3. WHY IT HAPPENS -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>Why does it happen? 🧠</h2>
+          <p class="big">Your brain <em>hates</em> unfinished things.</p>
+          <ul>
+            <li>It's called the <span class="accent">Zeigarnik effect</span></li>
+            <li>We remember <em>unfinished</em> tasks better than finished ones</li>
+            <li>An unfinished song = an open loop → brain keeps replaying it to "close" it</li>
+          </ul>
+          <aside class="notes">
+            <p><strong style="color:#ffd23f">Speaker A (~60s):</strong></p>
+            <p>"Here's the cool part. There's a psychology principle called the Zeigarnik effect:
+            our brains hold on to unfinished tasks much more than finished ones. It's why a
+            half-done to-do nags at you."</p>
+            <p>"A song stuck in your head is basically an open loop. The brain keeps hitting replay
+            trying to 'complete' it. Hold that idea — because it's also the key to the cure later."</p>
+          </aside>
+        </section>
+
+        <!-- 4. TRIGGERS -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>What sets it off?</h2>
+          <ul>
+            <li>🎧 You heard the song <em>recently</em> (or a lot)</li>
+            <li>😬 You're <em>stressed</em> or tired</li>
+            <li>😶‍🌫️ Your mind is <em>idle</em> — boring or low-focus tasks</li>
+          </ul>
+          <p class="tag">An empty mind is the perfect stage for a song.</p>
+          <aside class="notes">
+            <p><strong style="color:#ffd23f">Speaker A (~45s), then hand off:</strong></p>
+            <p>"Common triggers: hearing the song recently, being stressed or tired, or — the big
+            one — when your mind is idle. Doing dishes, walking, a boring task. The brain fills the
+            silence with music."</p>
+            <p><strong>Hand-off line:</strong> "So which songs are the worst offenders? [Speaker B]
+            is going to tell you — and how to get rid of them."</p>
+          </aside>
+        </section>
+
+        <!-- 5. WHICH SONGS STICK -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>Which songs stick the most? <span class="speaker speaker-b">Speaker B</span></h2>
+          <ul>
+            <li>Simple, upbeat, easy to predict…</li>
+            <li>…but with one <em>surprising</em> twist or leap</li>
+          </ul>
+          <p class="tag">Survey "stickiest" hits:</p>
+          <p class="big"><em>Bad Romance</em> · <em>Can't Get You Out of My Head</em> · <em>Bohemian Rhapsody</em></p>
+          <aside class="notes">
+            <p><strong style="color:#ff6b6b">Speaker B — take over (~55s):</strong></p>
+            <p>"Thanks! So the stickiest songs share a recipe: simple and catchy, easy for your
+            brain to predict — but with one unexpected little hook or leap that keeps it
+            interesting."</p>
+            <p>"In surveys, people named songs like Lady Gaga's Bad Romance, Kylie's 'Can't Get You
+            Out of My Head' — appropriately — and Bohemian Rhapsody."</p>
+            <p><em>Honesty note: this 'stickiest' list is from surveys/polls — fun reference, not
+            hard science. Say it casually.</em></p>
+          </aside>
+        </section>
+
+        <!-- 6. HOW TO GET RID OF IT -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>How to get rid of it ✅</h2>
+          <ul>
+            <li>▶️ <em>Finish the song</em> — listen all the way through (close the loop!)</li>
+            <li>🍬 <em>Chew gum</em> — it occupies your "inner voice"</li>
+            <li>🧩 <em>Do something mildly engaging</em> — a puzzle, a chat</li>
+            <li>🎶 Play a reliable <em>"cure song"</em> (e.g. Happy Birthday)</li>
+          </ul>
+          <aside class="notes">
+            <p><strong style="color:#ff6b6b">Speaker B (~70s) — the payoff:</strong></p>
+            <p>"Now the useful part. Remember the open loop? Number one trick: <em>finish the
+            song</em>. Listening all the way through tells your brain it's complete — loop closed."</p>
+            <p>"Two: chew gum. Sounds silly, but there's a real study — chewing occupies the same
+            brain machinery you use to 'play' music in your head."</p>
+            <p>"Three: give your brain a mildly demanding task — a puzzle, a conversation. Too easy
+            won't work, too hard and you give up. Four: a go-to 'cure song' to overwrite it."</p>
+          </aside>
+        </section>
+
+        <!-- 7. BONUS FACTS -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>Bonus facts 🎁</h2>
+          <ul>
+            <li>🎸 Musicians &amp; frequent listeners get them <em>more</em></li>
+            <li>😴 They're <em>worse</em> when you're stressed or tired</li>
+            <li>♾️ A rare <em>chronic</em> form exists — but it's harmless for almost everyone</li>
+          </ul>
+          <aside class="notes">
+            <p><strong style="color:#ff6b6b">Speaker B (~40s):</strong></p>
+            <p>"A few fun extras: if you play music or listen a lot, you get earworms more often —
+            more songs loaded in. They get worse when you're stressed or tired. And there's a rare
+            chronic version tied to some conditions — but for basically everyone here, earworms are
+            totally harmless. Just annoying."</p>
+          </aside>
+        </section>
+
+        <!-- 8. CLOSE -->
+        <section
+          class="has-bg"
+          data-background-image="https://images.unsplash.com/photo-1499415479124-43c32433a620?auto=format&fit=crop&w=1600&q=80"
+          data-background-size="cover">
+          <h2>One thing to remember</h2>
+          <p class="quote big">An earworm is your brain trying to <em>finish an unfinished loop</em>.<br/>
+          So — <em>close the loop</em>, or <em>crowd it out.</em></p>
+          <p class="names accent">Thanks! 🎵 Any questions?</p>
+          <aside class="notes">
+            <p><strong style="color:#ff6b6b">Speaker B — close (~30s):</strong></p>
+            <p>"So if you leave with one thing: an earworm is just your brain trying to finish an
+            unfinished loop. Close the loop — finish the song — or crowd it out with gum or a task."</p>
+            <p>"And sorry in advance — you'll probably leave with one of those three songs stuck in
+            your head. Thanks! Any questions?"</p>
+          </aside>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- RevealJS core + Notes plugin (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        transition: 'slide',
+        controls: true,
+        progress: true,
+        plugins: [RevealNotes],
+      });
+    </script>
+  </body>
+</html>
+
